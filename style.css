@@ -1,0 +1,119 @@
+*{
+    margin: 0;
+    padding: 0%0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+:root{
+    --body-bg: white;
+    --content-bg: #232949;
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: var(--body-bg);
+}
+
+.card{
+    position: relative;
+    width: 320px;
+    height: 400px;
+    display:flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.card .imgBx{
+    position: relative;
+    width: 100%;
+    height: 240px;
+    border-radius: 15px;
+    background: url(images/MinecraftHouseResized.jpg);
+    background-size: cover;
+}
+
+.card .imgBx::before{
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left:50%;
+    width: 20px;
+    height: 20px;
+    /* background: #f00; */
+    border-radius: 50%;
+    box-shadow: -10px 10px 0 var(--body-bg);
+}
+
+.card .imgBx::after{
+    content: '';
+    position: absolute;
+    top: 150px;
+    left:0;
+    width: 20px;
+    height: 20px;
+    /* background: #f00; */
+    border-radius: 50%;
+    box-shadow: -10px 10px 0 var(--body-bg);
+}
+
+.card .content{
+    position: relative;
+    width: 100%;
+    height: 150px;
+    background: var(--content-bg);
+    border-radius: 15px;
+    border-top-left-radius: 0;
+    padding: 0 35px;
+}
+
+.card .content ul{
+    color: #fff;
+}
+
+.card .content .price{
+    position: absolute;
+    top: -80px;
+    height: 80px;
+    left: 0;
+    width: 50%;
+    background: var(--content-bg);
+    border-top: 10px solid var(--body-bg);
+    border-right: 10px solid var(--body-bg);
+    border-top-right-radius: 25px;
+}
+
+.card .content .price::before{
+    content: '';
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    /* background: #f00; */
+    border-radius: 50%;
+    box-shadow: -10px -10px 0 var(--body-bg);
+}
+
+.card .content .price::after{
+    content: '';
+    position: absolute;
+    bottom: 0;
+    right: -25px;
+    width: 25px;
+    height: 25px;
+    /* background: #f00; */
+    border-radius: 50%;
+    box-shadow: -10px 10px 0 var(--content-bg);
+}
+
+.card .content .price a{
+    position: relative;
+    background: var(--body-bg);
+    padding: 10px 20px;
+    margin: 15px 15px;
+    display: block;
+    border-radius: 7px;
+    font-weight: 600;
+    text-decoration: none;
+    color:#333;
+}
